@@ -13,7 +13,7 @@ export type ContactType = {
     first_name: string | null
     last_name: string | null
     avatar: string | null
-    lastUpdate: Date | string | null
+    lastUpdate: Date
     messages: Array<MessageType> | []
     newMessages: Array<MessageType> | []
 }

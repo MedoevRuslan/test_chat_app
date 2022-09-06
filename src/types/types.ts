@@ -2,7 +2,7 @@ export type MessageType = {
     id: number
     text: string,
     date: Date | string
-    dateString: string
+    dateString?: string
     userId: number
     sender: boolean,
 }

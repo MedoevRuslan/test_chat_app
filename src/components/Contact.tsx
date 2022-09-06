@@ -3,14 +3,14 @@ import { contactsSidebarDate } from '../utils/formatDate';
 import Avatar from './Avatar';
 import { ContactType, MessageType } from '../types/types'
 
-type Props = {
+type PropsType = {
     user: ContactType
     selectedContact: ContactType
     setSelectedContact: (user: ContactType) => void
     lastMessage: MessageType
 }
 
-const Contact: React.FC<Props> = ({ user, selectedContact, setSelectedContact, lastMessage }) =>  {
+const Contact: React.FC<PropsType> = ({ user, selectedContact, setSelectedContact, lastMessage }) =>  {
 
     const handleClick = (user: ContactType) => {
         setSelectedContact(user);

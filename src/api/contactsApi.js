@@ -7,7 +7,6 @@ export const fetchContacts = () => {
         .then(response => response.data)
         .then(users => addFieldsToObject(users.data, {
             lastUpdate: null, 
-            checked: false, 
             messages: [],
             newMessages: []
         }))

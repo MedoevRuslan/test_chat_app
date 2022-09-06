@@ -1,2 +1,2 @@
 export { contactsReducer } from './contactsReducer'
-export { messageReducer } from './messageReducer'
+export { authReducer } from './authReducer'

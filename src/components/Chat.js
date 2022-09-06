@@ -1,14 +1,16 @@
 import React from 'react';
-import ChatCanvasContainer from './ChatCanvasContainer';
+import ChatCanvas from './ChatCanvas';
 import ContactsContainer  from './ContactsContainer';
 
 function Chat() {
+
+    console.log('chat Render');
 
     return (
         <main>
             <section className='wrapper'>
                 <ContactsContainer />
-                <ChatCanvasContainer />
+                <ChatCanvas />
             </section>
         </main>
     );

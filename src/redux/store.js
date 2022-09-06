@@ -1,14 +1,15 @@
-import { applyMiddleware, combineReducers, legacy_createStore } from 'redux';
-import { messageReducer, contactsReducer, contactReducer } from './reducers';
+import { applyMiddleware, combineReducers, compose, legacy_createStore } from 'redux';
+import { authReducer, contactsReducer} from './reducers';
 import thunk from 'redux-thunk'
 
-
 const rootReducer = combineReducers({
-    messages: messageReducer,
+    auth: authReducer,
     contacts: contactsReducer,
 })
 
-export const store = legacy_createStore(rootReducer, applyMiddleware(thunk));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+export const store = legacy_createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
 window.store = store
 

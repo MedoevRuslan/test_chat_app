@@ -1,12 +1,13 @@
 import React from 'react';
+import MessageReceive from './MessageReceive';
+import MessageSend from './MessageSend';
 
-function Message({text, date, sender}) {
+function Message(props) {
 
     return (
-        <div className={`message__container ${sender ? 'message__sender' : ''}`}>
-            <div className={`message__body ${sender ? 'message__sender' : ''}`} >{text}</div>
-            <div className='message__date' >{date}</div>
-        </div>
+       props.sender 
+            ? <MessageSend {...props} />
+            : <MessageReceive {...props}/>
     );
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Preloader() {
+const Preloader: React.FC = () => {
     return <span style={{ textAlign: 'center' }} >Loading...</span>
 }
 

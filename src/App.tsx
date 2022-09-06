@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Chat from './components/Chat';
-import Login from './components/Login';
 
 function App() {
 
@@ -15,7 +14,7 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route path='*' element={ <Chat /> } />
-          <Route path='/login' element={<Login />}/>
+          {/* <Route path='/login' element={<Login />}/> */}
         </Routes>
     </BrowserRouter>
   )
